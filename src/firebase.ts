@@ -1,11 +1,11 @@
-// Import the functions you need from the SDKs you need
+
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, Auth } from "firebase/auth";
 import { getFirestore, Firestore } from "firebase/firestore";
 import { getStorage, FirebaseStorage } from "firebase/storage";
 import { getAnalytics, Analytics } from "firebase/analytics";
 
-// Define the Firebase configuration type (optional)
+
 interface FirebaseConfig {
   apiKey: string;
   authDomain: string;
@@ -16,7 +16,7 @@ interface FirebaseConfig {
   measurementId: string;
 }
 
-// Your web app's Firebase configuration
+
 const firebaseConfig: FirebaseConfig = {
   apiKey: "AIzaSyDKUSoj9l0XH_0i9Z9XlrwN9Z4vVWJKmq4",
   authDomain: "comment-system-17f90.firebaseapp.com",
