@@ -105,7 +105,7 @@ const CommentList: React.FC = () => {
             <img
               src={comment.fileUrl}
               alt="attachment"
-              className="max-w-full h-auto rounded-lg"
+              className="max-w-20 h-20 rounded-lg"
             />
           )}
           <p className="text-gray-500 text-sm">
