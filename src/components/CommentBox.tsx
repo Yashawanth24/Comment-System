@@ -52,7 +52,7 @@ const CommentBox: React.FC<CommentBoxProps> = ({ user }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-4 rounded-lg shadow-md">
+    <form onSubmit={handleSubmit} className="bg-white p-4 rounded-lg shadow-md text-center">
       <ReactQuill
         value={comment}
         onChange={setComment}
@@ -64,7 +64,7 @@ const CommentBox: React.FC<CommentBoxProps> = ({ user }) => {
         }}
         className="mb-4 py-6 "
         style={{ height: "200px", marginBottom: "1rem" }}
-        placeholder="Leave your comment"
+        placeholder="Leave your comment Here"
       />
       <input
         type="file"
@@ -75,7 +75,8 @@ const CommentBox: React.FC<CommentBoxProps> = ({ user }) => {
       <button
         type="submit"
         disabled={loading}
-        className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 disabled:bg-gray-400"
+        className="bg-blue-500 text-white py-2 px-4 rounded-md  hover:bg-blue-600 "
+        
       >
         {loading ? "Posting..." : "Post Comment"}
       </button>
