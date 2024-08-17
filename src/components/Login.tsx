@@ -7,20 +7,20 @@ const Login: React.FC = () => {
     try {
       await signInWithPopup(auth, googleProvider);
     } catch (error) {
-      console.error(error);
+      console.error("Error signing in:", error);
     }
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="flex justify-center items-center h-screen bg-gray-200">
       <button
         onClick={signInWithGoogle}
-        className="bg-white text-gray-700 py-2 px-4 rounded-md flex items-center hover:bg-gray-200"
+        className="bg-white text-gray-700 py-3 px-6 rounded-md flex items-center shadow-md hover:bg-gray-100 transition-colors"
       >
         <img
           src="https://pngimg.com/uploads/google/google_PNG19635.png"
           alt="Google logo"
-          className="w-5 h-5 mr-2"
+          className="w-6 h-6 mr-3"
         />
         Sign in with Google
       </button>

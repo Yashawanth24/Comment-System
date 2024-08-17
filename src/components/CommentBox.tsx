@@ -62,7 +62,9 @@ const CommentBox: React.FC<CommentBoxProps> = ({ user }) => {
             [{ list: "ordered" }, { list: "bullet" }],
           ],
         }}
-        className="mb-4"
+        className="mb-4 py-6 "
+        style={{ height: "200px", marginBottom: "1rem" }}
+        placeholder="Leave your comment"
       />
       <input
         type="file"

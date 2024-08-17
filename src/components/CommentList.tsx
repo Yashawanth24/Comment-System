@@ -24,7 +24,7 @@ interface Comment {
   createdAt: {
     toDate: () => Date;
   };
-  reactions: number; // Add reactions field to the Comment interface
+  reactions: number; 
 }
 
 const CommentList: React.FC = () => {
@@ -72,7 +72,7 @@ const CommentList: React.FC = () => {
   const handleReaction = async (commentId: string) => {
     const commentRef = doc(db, "comments", commentId);
     await updateDoc(commentRef, {
-      reactions: increment(1), // Increment the reaction count by 1
+      reactions: increment(1), 
     });
   };
 
@@ -116,7 +116,7 @@ const CommentList: React.FC = () => {
               onClick={() => handleReaction(comment.id)}
               className="mr-2 text-blue-500 hover:text-blue-700"
             >
-              👍 {comment.reactions} {/* Display the reaction count */}
+              👍 {comment.reactions} 
             </button>
           </div>
         </div>
