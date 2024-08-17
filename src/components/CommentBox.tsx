@@ -10,11 +10,9 @@ interface User {
   displayName: string;
   photoURL: string;
 }
-
 interface CommentBoxProps {
   user: User;
 }
-
 const CommentBox: React.FC<CommentBoxProps> = ({ user }) => {
   const [comment, setComment] = useState<string>("");
   const [file, setFile] = useState<File | null>(null);
@@ -52,7 +50,8 @@ const CommentBox: React.FC<CommentBoxProps> = ({ user }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-4 rounded-lg shadow-md text-center">
+    
+    <form onSubmit={handleSubmit} className="bg-white p-2 rounded-lg shadow-md text-center">
       <ReactQuill
         value={comment}
         onChange={setComment}
@@ -81,6 +80,7 @@ const CommentBox: React.FC<CommentBoxProps> = ({ user }) => {
         {loading ? "Posting..." : "Post Comment"}
       </button>
     </form>
+    
   );
 };
 
